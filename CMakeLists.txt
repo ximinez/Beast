@@ -49,8 +49,8 @@ else()
 endif()
 
 find_package(Boost REQUIRED COMPONENTS coroutine context thread filesystem program_options system)
-include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
-link_directories(${Boost_LIBRARY_DIR})
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
 
 if (APPLE AND NOT DEFINED ENV{OPENSSL_ROOT_DIR})
   find_program(HOMEBREW brew)
